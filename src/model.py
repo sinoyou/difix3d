@@ -2,6 +2,7 @@ import os
 import requests
 import sys
 import numpy as np
+import copy
 from PIL import Image
 from tqdm import tqdm
 import torch
@@ -16,9 +17,14 @@ from einops import rearrange, repeat
 
 def make_1step_sched():
     noise_scheduler_1step = DDPMScheduler.from_pretrained("stabilityai/sd-turbo", subfolder="scheduler")
-    noise_scheduler_1step.set_timesteps(1, device="cuda")
-    noise_scheduler_1step.alphas_cumprod = noise_scheduler_1step.alphas_cumprod.cuda()
-    return noise_scheduler_1step
+    return prepare_1step_sched(noise_scheduler_1step)
+
+
+def prepare_1step_sched(sched):
+    sched.set_timesteps(1, device="cuda")
+    if hasattr(sched, "alphas_cumprod"):
+        sched.alphas_cumprod = sched.alphas_cumprod.cuda()
+    return sched
 
 
 def my_vae_encoder_fwd(self, sample):
@@ -85,8 +91,22 @@ def download_url(url, outf):
 
 def load_ckpt_from_state_dict(net_difix, optimizer, pretrained_path):
     sd = torch.load(pretrained_path, map_location="cpu")
-    
-    if "state_dict_vae" in sd:
+
+    if sd.get("rank_unet", 0) > 0 and "default" not in (getattr(net_difix.unet, "peft_config", {}) or {}):
+        unet_lora_config = LoraConfig(
+            r=sd["rank_unet"],
+            lora_alpha=sd.get("alpha_unet", 2 * sd["rank_unet"]),
+            lora_dropout=sd.get("dropout_unet", 0.0),
+            init_lora_weights="gaussian",
+            target_modules=sd["unet_lora_target_modules"],
+        )
+        net_difix.unet.add_adapter(unet_lora_config)
+        net_difix.lora_rank_unet = sd["rank_unet"]
+        net_difix.target_modules_unet = sd["unet_lora_target_modules"]
+        net_difix.lora_alpha_unet = sd.get("alpha_unet", 2 * sd["rank_unet"])
+        net_difix.lora_dropout_unet = sd.get("dropout_unet", 0.0)
+
+    if "state_dict_vae" in sd and len(sd["state_dict_vae"]) > 0:
         _sd_vae = net_difix.vae.state_dict()
         for k in sd["state_dict_vae"]:
             _sd_vae[k] = sd["state_dict_vae"][k]
@@ -95,9 +115,9 @@ def load_ckpt_from_state_dict(net_difix, optimizer, pretrained_path):
     for k in sd["state_dict_unet"]:
         _sd_unet[k] = sd["state_dict_unet"][k]
     net_difix.unet.load_state_dict(_sd_unet)
-        
+
     optimizer.load_state_dict(sd["optimizer"])
-    
+
     return net_difix, optimizer
 
 
@@ -105,76 +125,178 @@ def save_ckpt(net_difix, optimizer, outf):
     sd = {}
     sd["vae_lora_target_modules"] = net_difix.target_modules_vae
     sd["rank_vae"] = net_difix.lora_rank_vae
-    sd["state_dict_unet"] = net_difix.unet.state_dict()
-    sd["state_dict_vae"] = {k: v for k, v in net_difix.vae.state_dict().items() if "lora" in k or "skip" in k}
-    
-    sd["optimizer"] = optimizer.state_dict()   
-    
+
+    if getattr(net_difix, "lora_rank_unet", 0) > 0:
+        sd["rank_unet"] = net_difix.lora_rank_unet
+        sd["unet_lora_target_modules"] = net_difix.target_modules_unet
+        sd["alpha_unet"] = net_difix.lora_alpha_unet or 2 * net_difix.lora_rank_unet
+        sd["dropout_unet"] = net_difix.lora_dropout_unet
+        sd["state_dict_unet"] = {k: v for k, v in net_difix.unet.state_dict().items() if "lora_" in k}
+    else:
+        sd["state_dict_unet"] = net_difix.unet.state_dict()
+
+    if getattr(net_difix, "freeze_vae", False):
+        sd["state_dict_vae"] = {}
+    else:
+        sd["state_dict_vae"] = {k: v for k, v in net_difix.vae.state_dict().items() if "lora" in k or "skip" in k}
+
+    sd["optimizer"] = optimizer.state_dict()
+
     torch.save(sd, outf)
 
 
-class Difix(torch.nn.Module):
-    def __init__(self, pretrained_name=None, pretrained_path=None, ckpt_folder="checkpoints", lora_rank_vae=4, mv_unet=False, timestep=999):
-        super().__init__()
-        self.tokenizer = AutoTokenizer.from_pretrained("stabilityai/sd-turbo", subfolder="tokenizer")
-        self.text_encoder = CLIPTextModel.from_pretrained("stabilityai/sd-turbo", subfolder="text_encoder").cuda()
-        self.sched = make_1step_sched()
+def vae_lora_target_modules(vae, adapter_name="vae_skip"):
+    lora_targets = []
+    for name, _ in vae.named_parameters():
+        marker = f".lora_A.{adapter_name}.weight"
+        if marker in name:
+            lora_targets.append(name.split(marker)[0])
+    if lora_targets:
+        return lora_targets
 
-        vae = AutoencoderKL.from_pretrained("stabilityai/sd-turbo", subfolder="vae")
-        vae.encoder.forward = my_vae_encoder_fwd.__get__(vae.encoder, vae.encoder.__class__)
-        vae.decoder.forward = my_vae_decoder_fwd.__get__(vae.decoder, vae.decoder.__class__)
-        # add the skip connection convs
+    target_suffixes = [
+        "conv1", "conv2", "conv_in", "conv_shortcut", "conv", "conv_out",
+        "skip_conv_1", "skip_conv_2", "skip_conv_3", "skip_conv_4",
+        "to_k", "to_q", "to_v", "to_out.0",
+    ]
+    target_modules = []
+    for _, (name, _) in enumerate(vae.named_modules()):
+        if 'decoder' in name and any(name.endswith(x) for x in target_suffixes):
+            target_modules.append(name)
+    return target_modules
+
+
+def vae_skip_metadata(vae, default_rank):
+    peft_config = getattr(vae, "peft_config", {})
+    config = peft_config.get("vae_skip") if peft_config is not None else None
+    if config is None:
+        return default_rank, vae_lora_target_modules(vae)
+
+    target_modules = config.target_modules
+    if isinstance(target_modules, str):
+        target_modules = [target_modules]
+    elif isinstance(target_modules, set):
+        target_modules = sorted(target_modules)
+    else:
+        target_modules = list(target_modules)
+    return config.r, target_modules
+
+
+def add_vae_skip_connections(vae):
+    vae.encoder.forward = my_vae_encoder_fwd.__get__(vae.encoder, vae.encoder.__class__)
+    vae.decoder.forward = my_vae_decoder_fwd.__get__(vae.decoder, vae.decoder.__class__)
+    if not hasattr(vae.decoder, "skip_conv_1"):
         vae.decoder.skip_conv_1 = torch.nn.Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False).cuda()
+    if not hasattr(vae.decoder, "skip_conv_2"):
         vae.decoder.skip_conv_2 = torch.nn.Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False).cuda()
+    if not hasattr(vae.decoder, "skip_conv_3"):
         vae.decoder.skip_conv_3 = torch.nn.Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False).cuda()
+    if not hasattr(vae.decoder, "skip_conv_4"):
         vae.decoder.skip_conv_4 = torch.nn.Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False).cuda()
-        vae.decoder.ignore_skip = False
-        
-        if mv_unet:
-            from mv_unet import UNet2DConditionModel
-        else:
-            from diffusers import UNet2DConditionModel
+    vae.decoder.ignore_skip = False
 
-        unet = UNet2DConditionModel.from_pretrained("stabilityai/sd-turbo", subfolder="unet")
+
+class Difix(torch.nn.Module):
+    def __init__(self, pretrained_name=None, pretrained_path=None, pretrained_pipeline_name_or_path=None, ckpt_folder="checkpoints", lora_rank_vae=4, mv_unet=False, timestep=999,
+                 lora_rank_unet=0, lora_alpha_unet=None, lora_dropout_unet=0.0, target_modules_unet=None, freeze_vae=False):
+        super().__init__()
+        self.lora_rank_vae = lora_rank_vae
+        self.target_modules_vae = None
+        self.lora_rank_unet = lora_rank_unet
+        self.lora_alpha_unet = lora_alpha_unet
+        self.lora_dropout_unet = lora_dropout_unet
+        self.target_modules_unet = target_modules_unet
+        self.freeze_vae = freeze_vae
+        pipeline_name = pretrained_pipeline_name_or_path or pretrained_name
+
+        if pipeline_name is not None:
+            from pipeline_difix import DifixPipeline
+
+            print(f"Loading pretrained DifixPipeline from {pipeline_name}")
+            pipe = DifixPipeline.from_pretrained(pipeline_name, trust_remote_code=True)
+            self.tokenizer = pipe.tokenizer
+            self.text_encoder = pipe.text_encoder.cuda()
+            self.sched = prepare_1step_sched(copy.deepcopy(pipe.scheduler))
+            vae = pipe.vae
+            unet = pipe.unet
+            add_vae_skip_connections(vae)
+            self.lora_rank_vae, self.target_modules_vae = vae_skip_metadata(vae, lora_rank_vae)
+
+            if "vae_skip" not in (getattr(vae, "peft_config", {}) or {}):
+                vae_lora_config = LoraConfig(r=self.lora_rank_vae, init_lora_weights="gaussian", target_modules=self.target_modules_vae)
+                vae.add_adapter(vae_lora_config, adapter_name="vae_skip")
+
+        else:
+            self.tokenizer = AutoTokenizer.from_pretrained("stabilityai/sd-turbo", subfolder="tokenizer")
+            self.text_encoder = CLIPTextModel.from_pretrained("stabilityai/sd-turbo", subfolder="text_encoder").cuda()
+            self.sched = make_1step_sched()
+
+            vae = AutoencoderKL.from_pretrained("stabilityai/sd-turbo", subfolder="vae")
+            add_vae_skip_connections(vae)
+
+            if mv_unet:
+                from mv_unet import UNet2DConditionModel
+            else:
+                from diffusers import UNet2DConditionModel
+
+            unet = UNet2DConditionModel.from_pretrained("stabilityai/sd-turbo", subfolder="unet")
+
+        if self.lora_rank_unet > 0 and "default" not in (getattr(unet, "peft_config", {}) or {}):
+            unet_lora_config = LoraConfig(
+                r=self.lora_rank_unet,
+                lora_alpha=self.lora_alpha_unet or 2 * self.lora_rank_unet,
+                lora_dropout=self.lora_dropout_unet,
+                init_lora_weights="gaussian",
+                target_modules=self.target_modules_unet,
+            )
+            unet.add_adapter(unet_lora_config)
+            self.lora_alpha_unet = self.lora_alpha_unet or 2 * self.lora_rank_unet
 
         if pretrained_path is not None:
             sd = torch.load(pretrained_path, map_location="cpu")
-            vae_lora_config = LoraConfig(r=sd["rank_vae"], init_lora_weights="gaussian", target_modules=sd["vae_lora_target_modules"])
-            vae.add_adapter(vae_lora_config, adapter_name="vae_skip")
-            _sd_vae = vae.state_dict()
-            for k in sd["state_dict_vae"]:
-                _sd_vae[k] = sd["state_dict_vae"][k]
-            vae.load_state_dict(_sd_vae)
+            if "vae_skip" not in (getattr(vae, "peft_config", {}) or {}):
+                vae_lora_config = LoraConfig(r=sd["rank_vae"], init_lora_weights="gaussian", target_modules=sd["vae_lora_target_modules"])
+                vae.add_adapter(vae_lora_config, adapter_name="vae_skip")
+            if sd.get("rank_unet", 0) > 0 and "default" not in (getattr(unet, "peft_config", {}) or {}):
+                unet_lora_config = LoraConfig(
+                    r=sd["rank_unet"],
+                    lora_alpha=sd.get("alpha_unet", 2 * sd["rank_unet"]),
+                    lora_dropout=sd.get("dropout_unet", 0.0),
+                    init_lora_weights="gaussian",
+                    target_modules=sd["unet_lora_target_modules"],
+                )
+                unet.add_adapter(unet_lora_config)
+                self.lora_rank_unet = sd["rank_unet"]
+                self.target_modules_unet = sd["unet_lora_target_modules"]
+                self.lora_alpha_unet = sd.get("alpha_unet", 2 * sd["rank_unet"])
+                self.lora_dropout_unet = sd.get("dropout_unet", 0.0)
+            if len(sd.get("state_dict_vae", {})) > 0:
+                _sd_vae = vae.state_dict()
+                for k in sd["state_dict_vae"]:
+                    _sd_vae[k] = sd["state_dict_vae"][k]
+                vae.load_state_dict(_sd_vae)
             _sd_unet = unet.state_dict()
             for k in sd["state_dict_unet"]:
                 _sd_unet[k] = sd["state_dict_unet"][k]
             unet.load_state_dict(_sd_unet)
 
-        elif pretrained_name is None and pretrained_path is None:
+            self.lora_rank_vae = sd["rank_vae"]
+            self.target_modules_vae = sd["vae_lora_target_modules"]
+
+        elif pipeline_name is None and pretrained_path is None:
             print("Initializing model with random weights")
-            target_modules_vae = []
 
             torch.nn.init.constant_(vae.decoder.skip_conv_1.weight, 1e-5)
             torch.nn.init.constant_(vae.decoder.skip_conv_2.weight, 1e-5)
             torch.nn.init.constant_(vae.decoder.skip_conv_3.weight, 1e-5)
             torch.nn.init.constant_(vae.decoder.skip_conv_4.weight, 1e-5)
-            target_modules_vae = ["conv1", "conv2", "conv_in", "conv_shortcut", "conv", "conv_out",
-                "skip_conv_1", "skip_conv_2", "skip_conv_3", "skip_conv_4",
-                "to_k", "to_q", "to_v", "to_out.0",
-            ]
-            
-            target_modules = []
-            for id, (name, param) in enumerate(vae.named_modules()):
-                if 'decoder' in name and any(name.endswith(x) for x in target_modules_vae):
-                    target_modules.append(name)
-            target_modules_vae = target_modules
+            target_modules_vae = vae_lora_target_modules(vae)
             vae.encoder.requires_grad_(False)
 
             vae_lora_config = LoraConfig(r=lora_rank_vae, init_lora_weights="gaussian",
                 target_modules=target_modules_vae)
             vae.add_adapter(vae_lora_config, adapter_name="vae_skip")
                 
-            self.lora_rank_vae = lora_rank_vae
             self.target_modules_vae = target_modules_vae
 
         # unet.enable_xformers_memory_efficient_attention()
@@ -200,16 +322,26 @@ class Difix(torch.nn.Module):
 
     def set_train(self):
         self.unet.train()
-        self.vae.train()
-        self.unet.requires_grad_(True)
+        if self.lora_rank_unet > 0:
+            self.unet.requires_grad_(False)
+            for n, p in self.unet.named_parameters():
+                if "lora_" in n:
+                    p.requires_grad = True
+        else:
+            self.unet.requires_grad_(True)
 
-        for n, _p in self.vae.named_parameters():
-            if "lora" in n:
-                _p.requires_grad = True
-        self.vae.decoder.skip_conv_1.requires_grad_(True)
-        self.vae.decoder.skip_conv_2.requires_grad_(True)
-        self.vae.decoder.skip_conv_3.requires_grad_(True)
-        self.vae.decoder.skip_conv_4.requires_grad_(True)
+        if self.freeze_vae:
+            self.vae.eval()
+            self.vae.requires_grad_(False)
+        else:
+            self.vae.train()
+            for n, _p in self.vae.named_parameters():
+                if "lora" in n:
+                    _p.requires_grad = True
+            self.vae.decoder.skip_conv_1.requires_grad_(True)
+            self.vae.decoder.skip_conv_2.requires_grad_(True)
+            self.vae.decoder.skip_conv_3.requires_grad_(True)
+            self.vae.decoder.skip_conv_4.requires_grad_(True)
 
     def forward(self, x, timesteps=None, prompt=None, prompt_tokens=None):
         # either the prompt or the prompt_tokens should be provided

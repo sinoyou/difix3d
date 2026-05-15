@@ -5,7 +5,6 @@ import random
 import argparse
 import numpy as np
 import torch
-import torch.nn.functional as F
 import torch.utils.checkpoint
 import torchvision
 import transformers
@@ -27,6 +26,16 @@ import wandb
 from model import Difix, load_ckpt_from_state_dict, save_ckpt
 from dataset import PairedDataset
 from loss import gram_loss
+
+
+def apply_valid_mask(x, valid_mask):
+    return x * valid_mask
+
+
+def masked_mse_loss(pred, target, valid_mask):
+    loss = (pred.float() - target.float()).pow(2) * valid_mask.float()
+    denom = valid_mask.float().sum() * pred.shape[1]
+    return loss.sum() / denom.clamp_min(1.0)
 
 
 def main(args):
@@ -51,9 +60,16 @@ def main(args):
         os.makedirs(os.path.join(args.output_dir, "eval"), exist_ok=True)
 
     net_difix = Difix(
-        lora_rank_vae=args.lora_rank_vae, 
+        pretrained_name=args.pretrained_model_name_or_path,
+        pretrained_pipeline_name_or_path=args.pretrained_pipeline_name_or_path,
+        lora_rank_vae=args.lora_rank_vae,
         timestep=args.timestep,
         mv_unet=args.mv_unet,
+        lora_rank_unet=args.lora_rank_unet if args.use_unet_lora else 0,
+        lora_alpha_unet=args.lora_alpha_unet,
+        lora_dropout_unet=args.lora_dropout_unet,
+        target_modules_unet=args.lora_target_modules_unet,
+        freeze_vae=args.freeze_vae,
     )
     net_difix.set_train()
 
@@ -79,29 +95,51 @@ def main(args):
 
     # make the optimizer
     layers_to_opt = []
-    layers_to_opt += list(net_difix.unet.parameters())
-   
-    for n, _p in net_difix.vae.named_parameters():
-        if "lora" in n and "vae_skip" in n:
-            assert _p.requires_grad
-            layers_to_opt.append(_p)
-    layers_to_opt = layers_to_opt + list(net_difix.vae.decoder.skip_conv_1.parameters()) + \
-        list(net_difix.vae.decoder.skip_conv_2.parameters()) + \
-        list(net_difix.vae.decoder.skip_conv_3.parameters()) + \
-        list(net_difix.vae.decoder.skip_conv_4.parameters())
+    if args.use_unet_lora:
+        layers_to_opt += [p for n, p in net_difix.unet.named_parameters()
+                          if "lora_" in n and p.requires_grad]
+    else:
+        layers_to_opt += list(net_difix.unet.parameters())
+
+    if not args.freeze_vae:
+        for n, _p in net_difix.vae.named_parameters():
+            if "lora" in n and "vae_skip" in n:
+                assert _p.requires_grad
+                layers_to_opt.append(_p)
+        layers_to_opt = layers_to_opt + list(net_difix.vae.decoder.skip_conv_1.parameters()) + \
+            list(net_difix.vae.decoder.skip_conv_2.parameters()) + \
+            list(net_difix.vae.decoder.skip_conv_3.parameters()) + \
+            list(net_difix.vae.decoder.skip_conv_4.parameters())
+
+    assert len(layers_to_opt) > 0, "No trainable params collected"
+    if accelerator.is_main_process:
+        n_params = sum(p.numel() for p in layers_to_opt)
+        print(f"Trainable params (optimizer): {n_params/1e6:.2f}M")
 
     optimizer = torch.optim.AdamW(layers_to_opt, lr=args.learning_rate,
         betas=(args.adam_beta1, args.adam_beta2), weight_decay=args.adam_weight_decay,
         eps=args.adam_epsilon,)
     lr_scheduler = get_scheduler(args.lr_scheduler, optimizer=optimizer,
-        num_warmup_steps=args.lr_warmup_steps * accelerator.num_processes,
-        num_training_steps=args.max_train_steps * accelerator.num_processes,
+        num_warmup_steps=args.lr_warmup_steps,
+        num_training_steps=args.max_train_steps,
         num_cycles=args.lr_num_cycles, power=args.lr_power,)
 
-    dataset_train = PairedDataset(dataset_path=args.dataset_path, split="train", tokenizer=net_difix.tokenizer)
+    dataset_train = PairedDataset(
+        dataset_path=args.dataset_path,
+        split="train",
+        height=args.resolution,
+        width=args.resolution,
+        tokenizer=net_difix.tokenizer,
+    )
     dl_train = torch.utils.data.DataLoader(dataset_train, batch_size=args.train_batch_size, shuffle=True, num_workers=args.dataloader_num_workers)
-    dataset_val = PairedDataset(dataset_path=args.dataset_path, split="test", tokenizer=net_difix.tokenizer)
-    random.Random(42).shuffle(dataset_val.img_names)
+    dataset_val = PairedDataset(
+        dataset_path=args.dataset_path,
+        split="test",
+        height=args.resolution,
+        width=args.resolution,
+        tokenizer=net_difix.tokenizer,
+    )
+    # random.Random(42).shuffle(dataset_val.img_img_idsnames)
     dl_val = torch.utils.data.DataLoader(dataset_val, batch_size=1, shuffle=False, num_workers=0)
 
     # Resume from checkpoint
@@ -169,6 +207,7 @@ def main(args):
             with accelerator.accumulate(*l_acc):
                 x_src = batch["conditioning_pixel_values"]
                 x_tgt = batch["output_pixel_values"]
+                invalid_mask = batch["invalid_pixel_mask"]
                 B, V, C, H, W = x_src.shape
 
                 # forward pass
@@ -176,21 +215,25 @@ def main(args):
                 
                 x_tgt = rearrange(x_tgt, 'b v c h w -> (b v) c h w')
                 x_tgt_pred = rearrange(x_tgt_pred, 'b v c h w -> (b v) c h w')
+                invalid_mask = rearrange(invalid_mask, 'b v c h w -> (b v) c h w')
+                valid_mask = 1.0 - invalid_mask
+                x_tgt_loss = apply_valid_mask(x_tgt, valid_mask)
+                x_tgt_pred_loss = apply_valid_mask(x_tgt_pred, valid_mask)
                          
                 # Reconstruction loss
-                loss_l2 = F.mse_loss(x_tgt_pred.float(), x_tgt.float(), reduction="mean") * args.lambda_l2
-                loss_lpips = net_lpips(x_tgt_pred.float(), x_tgt.float()).mean() * args.lambda_lpips
+                loss_l2 = masked_mse_loss(x_tgt_pred, x_tgt, valid_mask) * args.lambda_l2
+                loss_lpips = net_lpips(x_tgt_pred_loss.float(), x_tgt_loss.float()).mean() * args.lambda_lpips
                 loss = loss_l2 + loss_lpips
                 
                 # Gram matrix loss
                 if args.lambda_gram > 0:
                     if global_step > args.gram_loss_warmup_steps:
-                        x_tgt_pred_renorm = t_vgg_renorm(x_tgt_pred * 0.5 + 0.5)
+                        x_tgt_pred_renorm = t_vgg_renorm(x_tgt_pred_loss * 0.5 + 0.5)
                         crop_h, crop_w = 400, 400
                         top, left = random.randint(0, H - crop_h), random.randint(0, W - crop_w)
                         x_tgt_pred_renorm = crop(x_tgt_pred_renorm, top, left, crop_h, crop_w)
                         
-                        x_tgt_renorm = t_vgg_renorm(x_tgt * 0.5 + 0.5)
+                        x_tgt_renorm = t_vgg_renorm(x_tgt_loss * 0.5 + 0.5)
                         x_tgt_renorm = crop(x_tgt_renorm, top, left, crop_h, crop_w)
                         
                         loss_gram = gram_loss(x_tgt_pred_renorm.to(weight_dtype), x_tgt_renorm.to(weight_dtype), net_vgg) * args.lambda_gram
@@ -233,13 +276,13 @@ def main(args):
                             logs[k] = log_dict[k]
 
                     # checkpoint the model
-                    if global_step % args.checkpointing_steps == 1:
+                    if global_step > 0 and global_step % args.checkpointing_steps == 0:
                         outf = os.path.join(args.output_dir, "checkpoints", f"model_{global_step}.pkl")
                         # accelerator.unwrap_model(net_difix).save_model(outf)
                         save_ckpt(accelerator.unwrap_model(net_difix), optimizer, outf)
 
                     # compute validation set L2, LPIPS
-                    if args.eval_freq > 0 and global_step % args.eval_freq == 1:
+                    if args.eval_freq > 0 and global_step > 0 and global_step % args.eval_freq == 0:
                         l_l2, l_lpips = [], []
                         log_dict = {"sample/source": [], "sample/target": [], "sample/model_output": []}
                         for step, batch_val in enumerate(dl_val):
@@ -247,6 +290,7 @@ def main(args):
                                 break
                             x_src = batch_val["conditioning_pixel_values"].to(accelerator.device, dtype=weight_dtype)
                             x_tgt = batch_val["output_pixel_values"].to(accelerator.device, dtype=weight_dtype)
+                            invalid_mask = batch_val["invalid_pixel_mask"].to(accelerator.device, dtype=weight_dtype)
                             B, V, C, H, W = x_src.shape
                             assert B == 1, "Use batch size 1 for eval."
                             with torch.no_grad():
@@ -260,9 +304,12 @@ def main(args):
                                 
                                 x_tgt = x_tgt[:, 0] # take the input view
                                 x_tgt_pred = x_tgt_pred[:, 0] # take the input view
+                                valid_mask = 1.0 - invalid_mask[:, 0]
+                                x_tgt_loss = apply_valid_mask(x_tgt, valid_mask)
+                                x_tgt_pred_loss = apply_valid_mask(x_tgt_pred, valid_mask)
                                 # compute the reconstruction losses
-                                loss_l2 = F.mse_loss(x_tgt_pred.float(), x_tgt.float(), reduction="mean")
-                                loss_lpips = net_lpips(x_tgt_pred.float(), x_tgt.float()).mean()
+                                loss_l2 = masked_mse_loss(x_tgt_pred, x_tgt, valid_mask)
+                                loss_lpips = net_lpips(x_tgt_pred_loss.float(), x_tgt_loss.float()).mean()
 
                                 l_l2.append(loss_l2.item())
                                 l_lpips.append(loss_lpips.item())
@@ -292,7 +339,7 @@ if __name__ == "__main__":
     parser.add_argument("--prompt", default=None, type=str)
 
     # validation eval args
-    parser.add_argument("--eval_freq", default=100, type=int)
+    parser.add_argument("--eval_freq", default=500, type=int)
     parser.add_argument("--num_samples_eval", type=int, default=100, help="Number of samples to use for all evaluation")
 
     parser.add_argument("--viz_freq", type=int, default=100, help="Frequency of visualizing the outputs.")
@@ -300,7 +347,9 @@ if __name__ == "__main__":
     parser.add_argument("--tracker_run_name", type=str, required=True)
 
     # details about the model architecture
-    parser.add_argument("--pretrained_model_name_or_path")
+    parser.add_argument("--pretrained_model_name_or_path", default="nvidia/difix", help="Hugging Face DifixPipeline repo to initialize from")
+    parser.add_argument("--pretrained_pipeline_name_or_path", default=None, type=str,
+        help="Optional Hugging Face DifixPipeline repo/path to load tokenizer, text encoder, scheduler, UNet, and VAE from.")
     parser.add_argument("--revision", type=str, default=None,)
     parser.add_argument("--variant", type=str, default=None,)
     parser.add_argument("--tokenizer_name", type=str, default=None)
@@ -308,18 +357,36 @@ if __name__ == "__main__":
     parser.add_argument("--timestep", default=199, type=int)
     parser.add_argument("--mv_unet", action="store_true")
 
+    # UNet LoRA / VAE freezing
+    parser.add_argument("--use_unet_lora", action="store_true",
+        help="Train a LoRA adapter on the UNet instead of full fine-tuning.")
+    parser.add_argument("--lora_rank_unet", type=int, default=8)
+    parser.add_argument("--lora_alpha_unet", type=int, default=None,
+        help="LoRA alpha for UNet. Defaults to 2 * lora_rank_unet.")
+    parser.add_argument("--lora_dropout_unet", type=float, default=0.0)
+    parser.add_argument("--lora_target_modules_unet", nargs="+",
+        default=["to_q", "to_k", "to_v", "to_out.0"],
+        help="UNet module name suffixes to apply LoRA to.")
+    parser.add_argument("--freeze_vae", action="store_true",
+        help="Freeze VAE entirely (no decoder LoRA updates, no skip-conv updates).")
+
     # training details
     parser.add_argument("--output_dir", required=True)
     parser.add_argument("--cache_dir", default=None,)
     parser.add_argument("--seed", type=int, default=None, help="A seed for reproducible training.")
-    parser.add_argument("--resolution", type=int, default=512,)
+    parser.add_argument(
+        "--resolution",
+        type=int,
+        default=512,
+        help="Resize train/test images to resolution×resolution (square).",
+    )
     parser.add_argument("--train_batch_size", type=int, default=4, help="Batch size (per device) for the training dataloader.")
     parser.add_argument("--num_training_epochs", type=int, default=10)
     parser.add_argument("--max_train_steps", type=int, default=10_000,)
     parser.add_argument("--checkpointing_steps", type=int, default=500,)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, help="Number of updates steps to accumulate before performing a backward/update pass.",)
     parser.add_argument("--gradient_checkpointing", action="store_true",)
-    parser.add_argument("--learning_rate", type=float, default=5e-6)
+    parser.add_argument("--learning_rate", type=float, default=1e-5)
     parser.add_argument("--lr_scheduler", type=str, default="constant",
         help=(
             'The scheduler type to use. Choose between ["linear", "cosine", "cosine_with_restarts", "polynomial",'
@@ -358,5 +425,7 @@ if __name__ == "__main__":
     parser.add_argument("--resume", default=None, type=str)
 
     args = parser.parse_args()
+    if not args.pretrained_model_name_or_path:
+        args.pretrained_model_name_or_path = None
 
     main(args)

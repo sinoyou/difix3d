@@ -1,0 +1,9 @@
+data/
+data_volleyball/
+outputs/
+.vscode/
+.claude/
+venv/
+src/__pycache__/
+logs/
+scripts/__pycache__/

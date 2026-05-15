@@ -1,6 +1,7 @@
 import json
 import torch
 from PIL import Image
+from torchvision.transforms import InterpolationMode
 import torchvision.transforms.functional as F
 
 
@@ -25,38 +26,50 @@ class PairedDataset(torch.utils.data.Dataset):
         input_img = self.data[img_id]["image"]
         output_img = self.data[img_id]["target_image"]
         ref_img = self.data[img_id]["ref_image"] if "ref_image" in self.data[img_id] else None
+        mask_img = self.data[img_id]["mask"] if "mask" in self.data[img_id] else None
         caption = self.data[img_id]["prompt"]
         
         try:
-            input_img = Image.open(input_img)
-            output_img = Image.open(output_img)
+            input_img = Image.open(input_img).convert("RGB")
+            output_img = Image.open(output_img).convert("RGB")
+            mask_img = Image.open(mask_img).convert("L") if mask_img is not None else None
         except:
             print("Error loading image:", input_img, output_img)
             return self.__getitem__(idx + 1)
 
-        img_t = F.to_tensor(img_t)
+        img_t = F.to_tensor(input_img)
         img_t = F.resize(img_t, self.image_size)
         img_t = F.normalize(img_t, mean=[0.5], std=[0.5])
 
-        output_t = F.to_tensor(output_t)
+        output_t = F.to_tensor(output_img)
         output_t = F.resize(output_t, self.image_size)
         output_t = F.normalize(output_t, mean=[0.5], std=[0.5])
 
+        if mask_img is not None:
+            mask_t = F.to_tensor(mask_img)
+            mask_t = F.resize(mask_t, self.image_size, interpolation=InterpolationMode.NEAREST)
+            mask_t = (mask_t > 0.5).float()
+        else:
+            mask_t = torch.zeros((1, *self.image_size), dtype=output_t.dtype)
+
         if ref_img is not None:
-            ref_img = Image.open(ref_img)
-            ref_t = F.to_tensor(ref_t)
+            ref_img = Image.open(ref_img).convert("RGB")
+            ref_t = F.to_tensor(ref_img)
             ref_t = F.resize(ref_t, self.image_size)
             ref_t = F.normalize(ref_t, mean=[0.5], std=[0.5])
         
             img_t = torch.stack([img_t, ref_t], dim=0)
-            output_t = torch.stack([output_t, ref_t], dim=0)            
+            output_t = torch.stack([output_t, ref_t], dim=0)
+            mask_t = torch.stack([mask_t, torch.zeros_like(mask_t)], dim=0)
         else:
             img_t = img_t.unsqueeze(0)
             output_t = output_t.unsqueeze(0)
+            mask_t = mask_t.unsqueeze(0)
 
         out = {
             "output_pixel_values": output_t,
             "conditioning_pixel_values": img_t,
+            "invalid_pixel_mask": mask_t,
             "caption": caption,
         }
         

@@ -17,6 +17,8 @@ if __name__ == "__main__":
     parser.add_argument('--width', type=int, default=1024, help='Width of the input image')
     parser.add_argument('--prompt', type=str, required=True, help='The prompt to be used')
     parser.add_argument('--model_name', type=str, default=None, help='Name of the pretrained model to be used')
+    parser.add_argument('--pretrained_model_name_or_path', type=str, default=None, help='Hugging Face DifixPipeline repo to load')
+    parser.add_argument('--pretrained_pipeline_name_or_path', type=str, default=None, help='Hugging Face DifixPipeline repo/path to load')
     parser.add_argument('--model_path', type=str, default=None, help='Path to a model state dict to be used')
     parser.add_argument('--output_dir', type=str, default='output', help='Directory to save the output')
     parser.add_argument('--seed', type=int, default=42, help='Random seed to be used')
@@ -28,8 +30,10 @@ if __name__ == "__main__":
     os.makedirs(args.output_dir, exist_ok=True)
 
     # Initialize the model
+    pretrained_name = args.pretrained_model_name_or_path or args.model_name
     model = Difix(
-        pretrained_name=args.model_name,
+        pretrained_name=pretrained_name,
+        pretrained_pipeline_name_or_path=args.pretrained_pipeline_name_or_path,
         pretrained_path=args.model_path,
         timestep=args.timestep,
         mv_unet=True if args.ref_image is not None else False,
