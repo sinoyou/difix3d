@@ -6,3 +6,4 @@ venv/
 src/__pycache__/
 logs/
 scripts/__pycache__/
+codex/
