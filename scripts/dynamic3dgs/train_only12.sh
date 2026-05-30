@@ -3,7 +3,7 @@ export NUM_GPUS=2
 export CUDA_VISIBLE_DEVICES=0,2
 accelerate launch src/train_difix.py \
   --output_dir=outputs/outputs/difix/train_dynamic3dgs_only12 \
-  --dataset_path="data/egohuman_finetune_only12.json" \
+  --dataset_path="data/tagging_zjumocap/egohuman_finetune_only12.json" \
   --pretrained_model_name_or_path nvidia/difix \
   --learning_rate 1e-5 \
   --lambda_lpips 1.0 --lambda_l2 1.0 --lambda_gram 1.0 --gram_loss_warmup_steps 500 \

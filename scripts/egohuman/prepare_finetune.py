@@ -99,7 +99,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source_root", type=Path, default=Path("finetuning_data"))
     parser.add_argument("--output_root", type=Path, default=Path("data"))
-    parser.add_argument("--json_path", type=Path, default=Path("data/egohuman_finetune.json"))
+    parser.add_argument("--json_path", type=Path, default=Path("data/tagging_zjumocap/egohuman_finetune.json"))
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()
 

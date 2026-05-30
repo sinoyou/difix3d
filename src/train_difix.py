@@ -267,10 +267,14 @@ def main(args):
 
                     # viz some images
                     if global_step % args.viz_freq == 1:
+                        # Dataset normalizes to [-1, 1]; denormalize back to [0, 1] for wandb.
+                        src_viz = (rearrange(x_src, "b v c h w -> b c (v h) w") * 0.5 + 0.5).clamp(0, 1).float().detach().cpu()
+                        tgt_viz = (rearrange(x_tgt, "b v c h w -> b c (v h) w") * 0.5 + 0.5).clamp(0, 1).float().detach().cpu()
+                        pred_viz = (rearrange(x_tgt_pred, "b v c h w -> b c (v h) w") * 0.5 + 0.5).clamp(0, 1).float().detach().cpu()
                         log_dict = {
-                            "train/source": [wandb.Image(rearrange(x_src, "b v c h w -> b c (v h) w")[idx].float().detach().cpu(), caption=f"idx={idx}") for idx in range(B)],
-                            "train/target": [wandb.Image(rearrange(x_tgt, "b v c h w -> b c (v h) w")[idx].float().detach().cpu(), caption=f"idx={idx}") for idx in range(B)],
-                            "train/model_output": [wandb.Image(rearrange(x_tgt_pred, "b v c h w -> b c (v h) w")[idx].float().detach().cpu(), caption=f"idx={idx}") for idx in range(B)],
+                            "train/source": [wandb.Image(src_viz[idx], caption=f"idx={idx}") for idx in range(B)],
+                            "train/target": [wandb.Image(tgt_viz[idx], caption=f"idx={idx}") for idx in range(B)],
+                            "train/model_output": [wandb.Image(pred_viz[idx], caption=f"idx={idx}") for idx in range(B)],
                         }
                         for k in log_dict:
                             logs[k] = log_dict[k]
@@ -298,9 +302,13 @@ def main(args):
                                 x_tgt_pred = accelerator.unwrap_model(net_difix)(x_src, prompt_tokens=batch_val["input_ids"].cuda())
                                 
                                 if step % 10 == 0:
-                                    log_dict["sample/source"].append(wandb.Image(rearrange(x_src, "b v c h w -> b c (v h) w")[0].float().detach().cpu(), caption=f"idx={len(log_dict['sample/source'])}"))
-                                    log_dict["sample/target"].append(wandb.Image(rearrange(x_tgt, "b v c h w -> b c (v h) w")[0].float().detach().cpu(), caption=f"idx={len(log_dict['sample/source'])}"))
-                                    log_dict["sample/model_output"].append(wandb.Image(rearrange(x_tgt_pred, "b v c h w -> b c (v h) w")[0].float().detach().cpu(), caption=f"idx={len(log_dict['sample/source'])}"))
+                                    # Dataset normalizes to [-1, 1]; denormalize back to [0, 1] for wandb.
+                                    src_viz = (rearrange(x_src, "b v c h w -> b c (v h) w")[0] * 0.5 + 0.5).clamp(0, 1).float().detach().cpu()
+                                    tgt_viz = (rearrange(x_tgt, "b v c h w -> b c (v h) w")[0] * 0.5 + 0.5).clamp(0, 1).float().detach().cpu()
+                                    pred_viz = (rearrange(x_tgt_pred, "b v c h w -> b c (v h) w")[0] * 0.5 + 0.5).clamp(0, 1).float().detach().cpu()
+                                    log_dict["sample/source"].append(wandb.Image(src_viz, caption=f"idx={len(log_dict['sample/source'])}"))
+                                    log_dict["sample/target"].append(wandb.Image(tgt_viz, caption=f"idx={len(log_dict['sample/source'])}"))
+                                    log_dict["sample/model_output"].append(wandb.Image(pred_viz, caption=f"idx={len(log_dict['sample/source'])}"))
                                 
                                 x_tgt = x_tgt[:, 0] # take the input view
                                 x_tgt_pred = x_tgt_pred[:, 0] # take the input view
@@ -321,6 +329,14 @@ def main(args):
                         gc.collect()
                         torch.cuda.empty_cache()
                     accelerator.log(logs, step=global_step)
+
+    # Always save a final checkpoint when the epoch loop finishes — guards
+    # against the case where total steps < checkpointing_steps.
+    if accelerator.is_main_process:
+        final_path = os.path.join(args.output_dir, "checkpoints", f"model_final_{global_step}.pkl")
+        os.makedirs(os.path.dirname(final_path), exist_ok=True)
+        save_ckpt(accelerator.unwrap_model(net_difix), optimizer, final_path)
+        print(f"Saved final checkpoint to {final_path}")
 
 
 if __name__ == "__main__":

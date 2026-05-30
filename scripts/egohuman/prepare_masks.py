@@ -101,7 +101,7 @@ def prepare_masks(source_root, json_path, overwrite=False, erode_kernel=3):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source_root", type=Path, default=DEFAULT_SOURCE_ROOT)
-    parser.add_argument("--json_path", type=Path, default=Path("data/egohuman_finetune.json"))
+    parser.add_argument("--json_path", type=Path, default=Path("data/tagging_zjumocap/egohuman_finetune.json"))
     parser.add_argument("--erode_kernel", type=int, default=3)
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()

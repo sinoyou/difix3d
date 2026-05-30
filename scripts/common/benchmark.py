@@ -238,7 +238,7 @@ def parse_args():
     parser.add_argument("--comparison_video_name", default="comparison_clean_corrupted_pretrained_finetuned.mp4")
     parser.add_argument("--pretrained_model_name_or_path", default="nvidia/difix")
     parser.add_argument("--finetuned_checkpoint", type=Path, default=Path("outputs/difix/train/checkpoints/model_4400.pkl"))
-    parser.add_argument("--metrics_path", type=Path, default=Path("data/egohuman_benchmark_metrics.json"))
+    parser.add_argument("--metrics_path", type=Path, default=Path("data/tagging_zjumocap/egohuman_benchmark_metrics.json"))
     parser.add_argument("--prompt", default=PROMPT)
     parser.add_argument("--image_size", type=int, default=512)
     parser.add_argument("--timestep", type=int, default=199)

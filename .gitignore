@@ -1,8 +1,7 @@
-data/
-data_volleyball/
+data/tagging_zjumocap/
+data/volleyball_static/
 outputs/
 .vscode/
-.claude/
 venv/
 src/__pycache__/
 logs/

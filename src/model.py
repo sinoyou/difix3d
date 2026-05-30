@@ -213,6 +213,8 @@ class Difix(torch.nn.Module):
             from pipeline_difix import DifixPipeline
 
             print(f"Loading pretrained DifixPipeline from {pipeline_name}")
+            if mv_unet:
+                pipeline_name = pipeline_name + "_ref"
             pipe = DifixPipeline.from_pretrained(pipeline_name, trust_remote_code=True)
             self.tokenizer = pipe.tokenizer
             self.text_encoder = pipe.text_encoder.cuda()

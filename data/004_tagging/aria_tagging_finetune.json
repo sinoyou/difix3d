@@ -1,0 +1,2244 @@
+{
+  "train": {
+    "aria01_00001": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00001.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00001.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00001/_invalid.png"
+    },
+    "aria01_00002": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00002.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00002.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00002/_invalid.png"
+    },
+    "aria01_00003": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00003.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00003.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00003/_invalid.png"
+    },
+    "aria01_00005": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00005.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00005.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00005/_invalid.png"
+    },
+    "aria01_00006": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00006.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00006.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00006/_invalid.png"
+    },
+    "aria01_00007": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00007.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00007.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00007/_invalid.png"
+    },
+    "aria01_00008": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00008.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00008.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00008/_invalid.png"
+    },
+    "aria01_00009": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00009.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00009.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00009/_invalid.png"
+    },
+    "aria01_00010": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00010.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00010.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00010/_invalid.png"
+    },
+    "aria01_00011": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00011.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00011.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00011/_invalid.png"
+    },
+    "aria01_00012": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00012.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00012.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00012/_invalid.png"
+    },
+    "aria01_00015": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00015.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00015.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00015/_invalid.png"
+    },
+    "aria01_00018": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00018.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00018.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00018/_invalid.png"
+    },
+    "aria01_00019": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00019.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00019.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00019/_invalid.png"
+    },
+    "aria01_00020": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00020.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00020.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00020/_invalid.png"
+    },
+    "aria01_00021": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00021.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00021.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00021/_invalid.png"
+    },
+    "aria01_00022": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00022.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00022.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00022/_invalid.png"
+    },
+    "aria01_00023": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00023.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00023.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00023/_invalid.png"
+    },
+    "aria01_00024": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00024.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00024.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00024/_invalid.png"
+    },
+    "aria01_00025": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00025.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00025.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00025/_invalid.png"
+    },
+    "aria01_00026": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00026.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00026.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00026/_invalid.png"
+    },
+    "aria01_00027": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00027.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00027.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00027/_invalid.png"
+    },
+    "aria01_00028": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00028.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00028.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00028/_invalid.png"
+    },
+    "aria01_00029": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00029.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00029.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00029/_invalid.png"
+    },
+    "aria01_00030": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00030.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00030.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00030/_invalid.png"
+    },
+    "aria01_00031": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00031.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00031.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00031/_invalid.png"
+    },
+    "aria01_00032": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00032.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00032.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00032/_invalid.png"
+    },
+    "aria01_00033": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00033.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00033.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00033/_invalid.png"
+    },
+    "aria01_00034": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00034.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00034.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00034/_invalid.png"
+    },
+    "aria01_00035": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00035.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00035.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00035/_invalid.png"
+    },
+    "aria01_00036": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00036.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00036.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00036/_invalid.png"
+    },
+    "aria01_00037": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00037.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00037.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00037/_invalid.png"
+    },
+    "aria01_00038": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00038.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00038.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00038/_invalid.png"
+    },
+    "aria01_00039": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00039.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00039.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00039/_invalid.png"
+    },
+    "aria01_00040": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00040.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00040.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00040/_invalid.png"
+    },
+    "aria01_00041": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00041.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00041.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00041/_invalid.png"
+    },
+    "aria01_00042": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00042.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00042.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00042/_invalid.png"
+    },
+    "aria01_00043": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00043.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00043.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00043/_invalid.png"
+    },
+    "aria01_00056": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00056.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00056.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00056/_invalid.png"
+    },
+    "aria01_00058": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00058.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00058.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00058/_invalid.png"
+    },
+    "aria01_00059": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00059.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00059.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00059/_invalid.png"
+    },
+    "aria01_00061": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00061.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00061.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00061/_invalid.png"
+    },
+    "aria01_00062": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00062.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00062.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00062/_invalid.png"
+    },
+    "aria01_00063": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00063.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00063.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00063/_invalid.png"
+    },
+    "aria01_00065": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00065.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00065.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00065/_invalid.png"
+    },
+    "aria01_00070": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00070.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00070.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00070/_invalid.png"
+    },
+    "aria01_00071": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00071.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00071.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00071/_invalid.png"
+    },
+    "aria01_00077": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00077.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00077.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00077/_invalid.png"
+    },
+    "aria01_00078": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00078.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00078.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00078/_invalid.png"
+    },
+    "aria01_00080": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00080.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00080.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00080/_invalid.png"
+    },
+    "aria01_00081": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00081.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00081.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00081/_invalid.png"
+    },
+    "aria01_00082": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00082.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00082.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00082/_invalid.png"
+    },
+    "aria01_00083": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00083.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00083.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00083/_invalid.png"
+    },
+    "aria01_00084": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00084.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00084.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00084/_invalid.png"
+    },
+    "aria01_00085": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00085.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00085.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00085/_invalid.png"
+    },
+    "aria01_00086": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00086.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00086.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00086/_invalid.png"
+    },
+    "aria01_00087": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00087.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00087.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00087/_invalid.png"
+    },
+    "aria01_00088": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00088.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00088.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00088/_invalid.png"
+    },
+    "aria01_00089": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00089.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00089.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00089/_invalid.png"
+    },
+    "aria01_00090": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00090.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00090.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00090/_invalid.png"
+    },
+    "aria01_00091": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00091.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00091.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00091/_invalid.png"
+    },
+    "aria01_00092": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00092.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00092.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00092/_invalid.png"
+    },
+    "aria01_00094": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00094.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00094.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00094/_invalid.png"
+    },
+    "aria01_00095": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00095.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00095.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00095/_invalid.png"
+    },
+    "aria01_00096": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00096.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00096.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00096/_invalid.png"
+    },
+    "aria01_00097": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00097.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00097.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00097/_invalid.png"
+    },
+    "aria01_00098": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00098.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00098.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00098/_invalid.png"
+    },
+    "aria01_00099": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00099.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00099.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00099/_invalid.png"
+    },
+    "aria01_00100": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00100.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00100.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00100/_invalid.png"
+    },
+    "aria01_00102": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00102.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00102.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00102/_invalid.png"
+    },
+    "aria01_00104": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00104.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00104.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00104/_invalid.png"
+    },
+    "aria01_00105": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00105.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00105.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00105/_invalid.png"
+    },
+    "aria01_00106": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00106.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00106.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00106/_invalid.png"
+    },
+    "aria01_00107": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00107.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00107.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00107/_invalid.png"
+    },
+    "aria01_00108": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00108.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00108.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00108/_invalid.png"
+    },
+    "aria01_00109": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00109.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00109.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00109/_invalid.png"
+    },
+    "aria01_00110": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00110.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00110.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00110/_invalid.png"
+    },
+    "aria01_00111": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00111.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00111.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00111/_invalid.png"
+    },
+    "aria01_00112": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00112.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00112.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00112/_invalid.png"
+    },
+    "aria01_00113": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00113.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00113.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00113/_invalid.png"
+    },
+    "aria01_00114": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00114.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00114.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00114/_invalid.png"
+    },
+    "aria01_00121": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00121.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00121.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00121/_invalid.png"
+    },
+    "aria02_00001": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00001.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00001.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00001/_invalid.png"
+    },
+    "aria02_00002": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00002.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00002.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00002/_invalid.png"
+    },
+    "aria02_00003": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00003.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00003.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00003/_invalid.png"
+    },
+    "aria02_00004": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00004.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00004.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00004/_invalid.png"
+    },
+    "aria02_00005": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00005.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00005.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00005/_invalid.png"
+    },
+    "aria02_00006": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00006.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00006.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00006/_invalid.png"
+    },
+    "aria02_00007": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00007.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00007.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00007/_invalid.png"
+    },
+    "aria02_00009": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00009.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00009.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00009/_invalid.png"
+    },
+    "aria02_00010": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00010.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00010.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00010/_invalid.png"
+    },
+    "aria02_00011": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00011.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00011.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00011/_invalid.png"
+    },
+    "aria02_00012": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00012.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00012.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00012/_invalid.png"
+    },
+    "aria02_00013": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00013.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00013.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00013/_invalid.png"
+    },
+    "aria02_00014": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00014.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00014.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00014/_invalid.png"
+    },
+    "aria02_00015": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00015.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00015.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00015/_invalid.png"
+    },
+    "aria02_00016": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00016.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00016.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00016/_invalid.png"
+    },
+    "aria02_00020": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00020.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00020.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00020/_invalid.png"
+    },
+    "aria02_00022": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00022.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00022.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00022/_invalid.png"
+    },
+    "aria02_00023": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00023.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00023.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00023/_invalid.png"
+    },
+    "aria02_00024": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00024.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00024.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00024/_invalid.png"
+    },
+    "aria02_00025": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00025.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00025.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00025/_invalid.png"
+    },
+    "aria02_00027": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00027.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00027.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00027/_invalid.png"
+    },
+    "aria02_00028": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00028.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00028.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00028/_invalid.png"
+    },
+    "aria02_00029": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00029.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00029.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00029/_invalid.png"
+    },
+    "aria02_00030": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00030.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00030.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00030/_invalid.png"
+    },
+    "aria02_00031": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00031.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00031.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00031/_invalid.png"
+    },
+    "aria02_00033": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00033.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00033.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00033/_invalid.png"
+    },
+    "aria02_00034": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00034.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00034.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00034/_invalid.png"
+    },
+    "aria02_00035": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00035.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00035.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00035/_invalid.png"
+    },
+    "aria02_00036": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00036.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00036.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00036/_invalid.png"
+    },
+    "aria02_00037": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00037.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00037.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00037/_invalid.png"
+    },
+    "aria02_00038": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00038.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00038.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00038/_invalid.png"
+    },
+    "aria02_00039": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00039.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00039.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00039/_invalid.png"
+    },
+    "aria02_00040": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00040.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00040.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00040/_invalid.png"
+    },
+    "aria02_00041": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00041.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00041.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00041/_invalid.png"
+    },
+    "aria02_00042": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00042.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00042.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00042/_invalid.png"
+    },
+    "aria02_00048": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00048.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00048.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00048/_invalid.png"
+    },
+    "aria02_00049": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00049.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00049.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00049/_invalid.png"
+    },
+    "aria02_00050": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00050.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00050.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00050/_invalid.png"
+    },
+    "aria02_00051": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00051.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00051.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00051/_invalid.png"
+    },
+    "aria02_00053": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00053.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00053.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00053/_invalid.png"
+    },
+    "aria02_00055": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00055.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00055.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00055/_invalid.png"
+    },
+    "aria02_00056": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00056.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00056.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00056/_invalid.png"
+    },
+    "aria02_00057": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00057.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00057.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00057/_invalid.png"
+    },
+    "aria02_00058": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00058.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00058.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00058/_invalid.png"
+    },
+    "aria02_00059": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00059.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00059.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00059/_invalid.png"
+    },
+    "aria02_00060": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00060.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00060.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00060/_invalid.png"
+    },
+    "aria02_00061": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00061.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00061.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00061/_invalid.png"
+    },
+    "aria02_00062": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00062.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00062.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00062/_invalid.png"
+    },
+    "aria02_00063": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00063.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00063.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00063/_invalid.png"
+    },
+    "aria02_00064": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00064.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00064.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00064/_invalid.png"
+    },
+    "aria02_00065": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00065.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00065.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00065/_invalid.png"
+    },
+    "aria02_00066": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00066.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00066.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00066/_invalid.png"
+    },
+    "aria02_00067": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00067.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00067.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00067/_invalid.png"
+    },
+    "aria02_00068": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00068.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00068.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00068/_invalid.png"
+    },
+    "aria02_00069": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00069.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00069.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00069/_invalid.png"
+    },
+    "aria02_00070": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00070.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00070.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00070/_invalid.png"
+    },
+    "aria02_00091": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00091.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00091.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00091/_invalid.png"
+    },
+    "aria02_00094": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00094.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00094.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00094/_invalid.png"
+    },
+    "aria02_00095": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00095.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00095.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00095/_invalid.png"
+    },
+    "aria02_00096": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00096.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00096.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00096/_invalid.png"
+    },
+    "aria02_00097": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00097.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00097.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00097/_invalid.png"
+    },
+    "aria02_00099": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00099.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00099.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00099/_invalid.png"
+    },
+    "aria02_00100": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00100.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00100.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00100/_invalid.png"
+    },
+    "aria02_00101": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00101.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00101.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00101/_invalid.png"
+    },
+    "aria02_00102": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00102.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00102.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00102/_invalid.png"
+    },
+    "aria02_00103": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00103.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00103.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00103/_invalid.png"
+    },
+    "aria02_00104": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00104.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00104.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00104/_invalid.png"
+    },
+    "aria02_00105": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00105.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00105.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00105/_invalid.png"
+    },
+    "aria02_00106": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00106.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00106.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00106/_invalid.png"
+    },
+    "aria02_00108": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00108.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00108.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00108/_invalid.png"
+    },
+    "aria02_00109": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00109.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00109.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00109/_invalid.png"
+    },
+    "aria02_00111": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00111.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00111.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00111/_invalid.png"
+    },
+    "aria02_00112": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00112.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00112.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00112/_invalid.png"
+    },
+    "aria02_00113": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00113.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00113.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00113/_invalid.png"
+    },
+    "aria02_00114": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00114.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00114.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00114/_invalid.png"
+    },
+    "aria02_00115": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00115.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00115.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00115/_invalid.png"
+    },
+    "aria02_00116": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00116.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00116.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00116/_invalid.png"
+    },
+    "aria02_00117": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00117.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00117.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00117/_invalid.png"
+    },
+    "aria02_00118": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00118.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00118.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00118/_invalid.png"
+    },
+    "aria02_00119": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00119.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00119.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00119/_invalid.png"
+    },
+    "aria02_00120": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00120.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00120.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00120/_invalid.png"
+    },
+    "aria03_00001": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00001.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00001.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00001/_invalid.png"
+    },
+    "aria03_00002": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00002.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00002.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00002/_invalid.png"
+    },
+    "aria03_00003": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00003.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00003.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00003/_invalid.png"
+    },
+    "aria03_00004": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00004.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00004.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00004/_invalid.png"
+    },
+    "aria03_00005": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00005.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00005.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00005/_invalid.png"
+    },
+    "aria03_00006": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00006.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00006.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00006/_invalid.png"
+    },
+    "aria03_00007": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00007.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00007.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00007/_invalid.png"
+    },
+    "aria03_00009": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00009.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00009.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00009/_invalid.png"
+    },
+    "aria03_00010": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00010.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00010.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00010/_invalid.png"
+    },
+    "aria03_00011": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00011.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00011.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00011/_invalid.png"
+    },
+    "aria03_00012": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00012.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00012.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00012/_invalid.png"
+    },
+    "aria03_00013": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00013.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00013.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00013/_invalid.png"
+    },
+    "aria03_00014": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00014.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00014.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00014/_invalid.png"
+    },
+    "aria03_00015": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00015.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00015.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00015/_invalid.png"
+    },
+    "aria03_00016": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00016.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00016.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00016/_invalid.png"
+    },
+    "aria03_00018": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00018.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00018.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00018/_invalid.png"
+    },
+    "aria03_00019": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00019.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00019.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00019/_invalid.png"
+    },
+    "aria03_00020": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00020.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00020.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00020/_invalid.png"
+    },
+    "aria03_00021": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00021.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00021.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00021/_invalid.png"
+    },
+    "aria03_00022": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00022.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00022.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00022/_invalid.png"
+    },
+    "aria03_00023": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00023.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00023.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00023/_invalid.png"
+    },
+    "aria03_00024": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00024.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00024.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00024/_invalid.png"
+    },
+    "aria03_00025": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00025.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00025.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00025/_invalid.png"
+    },
+    "aria03_00026": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00026.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00026.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00026/_invalid.png"
+    },
+    "aria03_00027": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00027.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00027.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00027/_invalid.png"
+    },
+    "aria03_00028": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00028.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00028.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00028/_invalid.png"
+    },
+    "aria03_00029": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00029.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00029.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00029/_invalid.png"
+    },
+    "aria03_00030": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00030.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00030.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00030/_invalid.png"
+    },
+    "aria03_00031": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00031.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00031.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00031/_invalid.png"
+    },
+    "aria03_00033": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00033.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00033.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00033/_invalid.png"
+    },
+    "aria03_00035": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00035.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00035.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00035/_invalid.png"
+    },
+    "aria03_00036": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00036.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00036.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00036/_invalid.png"
+    },
+    "aria03_00037": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00037.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00037.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00037/_invalid.png"
+    },
+    "aria03_00038": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00038.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00038.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00038/_invalid.png"
+    },
+    "aria03_00039": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00039.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00039.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00039/_invalid.png"
+    },
+    "aria03_00040": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00040.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00040.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00040/_invalid.png"
+    },
+    "aria03_00041": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00041.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00041.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00041/_invalid.png"
+    },
+    "aria03_00042": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00042.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00042.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00042/_invalid.png"
+    },
+    "aria03_00043": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00043.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00043.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00043/_invalid.png"
+    },
+    "aria03_00045": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00045.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00045.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00045/_invalid.png"
+    },
+    "aria03_00053": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00053.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00053.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00053/_invalid.png"
+    },
+    "aria03_00062": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00062.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00062.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00062/_invalid.png"
+    },
+    "aria03_00064": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00064.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00064.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00064/_invalid.png"
+    },
+    "aria03_00065": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00065.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00065.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00065/_invalid.png"
+    },
+    "aria03_00066": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00066.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00066.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00066/_invalid.png"
+    },
+    "aria03_00067": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00067.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00067.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00067/_invalid.png"
+    },
+    "aria03_00068": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00068.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00068.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00068/_invalid.png"
+    },
+    "aria03_00069": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00069.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00069.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00069/_invalid.png"
+    },
+    "aria03_00070": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00070.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00070.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00070/_invalid.png"
+    },
+    "aria03_00076": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00076.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00076.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00076/_invalid.png"
+    },
+    "aria03_00077": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00077.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00077.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00077/_invalid.png"
+    },
+    "aria03_00078": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00078.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00078.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00078/_invalid.png"
+    },
+    "aria03_00079": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00079.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00079.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00079/_invalid.png"
+    },
+    "aria03_00080": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00080.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00080.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00080/_invalid.png"
+    },
+    "aria03_00081": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00081.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00081.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00081/_invalid.png"
+    },
+    "aria03_00082": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00082.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00082.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00082/_invalid.png"
+    },
+    "aria03_00083": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00083.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00083.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00083/_invalid.png"
+    },
+    "aria03_00084": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00084.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00084.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00084/_invalid.png"
+    },
+    "aria03_00085": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00085.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00085.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00085/_invalid.png"
+    },
+    "aria03_00086": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00086.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00086.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00086/_invalid.png"
+    },
+    "aria03_00087": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00087.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00087.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00087/_invalid.png"
+    },
+    "aria03_00088": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00088.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00088.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00088/_invalid.png"
+    },
+    "aria03_00089": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00089.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00089.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00089/_invalid.png"
+    },
+    "aria03_00090": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00090.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00090.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00090/_invalid.png"
+    },
+    "aria03_00091": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00091.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00091.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00091/_invalid.png"
+    },
+    "aria03_00092": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00092.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00092.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00092/_invalid.png"
+    },
+    "aria03_00093": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00093.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00093.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00093/_invalid.png"
+    },
+    "aria03_00094": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00094.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00094.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00094/_invalid.png"
+    },
+    "aria03_00095": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00095.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00095.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00095/_invalid.png"
+    },
+    "aria03_00096": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00096.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00096.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00096/_invalid.png"
+    },
+    "aria03_00098": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00098.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00098.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00098/_invalid.png"
+    },
+    "aria03_00099": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00099.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00099.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00099/_invalid.png"
+    },
+    "aria03_00100": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00100.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00100.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00100/_invalid.png"
+    },
+    "aria03_00101": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00101.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00101.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00101/_invalid.png"
+    },
+    "aria03_00102": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00102.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00102.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00102/_invalid.png"
+    },
+    "aria03_00103": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00103.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00103.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00103/_invalid.png"
+    },
+    "aria03_00104": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00104.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00104.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00104/_invalid.png"
+    },
+    "aria03_00105": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00105.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00105.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00105/_invalid.png"
+    },
+    "aria03_00106": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00106.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00106.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00106/_invalid.png"
+    },
+    "aria03_00107": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00107.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00107.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00107/_invalid.png"
+    },
+    "aria03_00108": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00108.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00108.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00108/_invalid.png"
+    },
+    "aria03_00109": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00109.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00109.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00109/_invalid.png"
+    },
+    "aria03_00110": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00110.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00110.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00110/_invalid.png"
+    },
+    "aria03_00111": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00111.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00111.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00111/_invalid.png"
+    },
+    "aria03_00112": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00112.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00112.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00112/_invalid.png"
+    },
+    "aria03_00113": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00113.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00113.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00113/_invalid.png"
+    },
+    "aria03_00114": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00114.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00114.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00114/_invalid.png"
+    },
+    "aria03_00115": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00115.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00115.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00115/_invalid.png"
+    },
+    "aria03_00116": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00116.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00116.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00116/_invalid.png"
+    },
+    "aria03_00117": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00117.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00117.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00117/_invalid.png"
+    },
+    "aria03_00119": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00119.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00119.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00119/_invalid.png"
+    },
+    "aria03_00120": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00120.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00120.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00120/_invalid.png"
+    },
+    "aria03_00121": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00121.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00121.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00121/_invalid.png"
+    },
+    "aria04_00001": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00001.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00001.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00001/_invalid.png"
+    },
+    "aria04_00002": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00002.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00002.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00002/_invalid.png"
+    },
+    "aria04_00003": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00003.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00003.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00003/_invalid.png"
+    },
+    "aria04_00006": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00006.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00006.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00006/_invalid.png"
+    },
+    "aria04_00008": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00008.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00008.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00008/_invalid.png"
+    },
+    "aria04_00009": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00009.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00009.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00009/_invalid.png"
+    },
+    "aria04_00010": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00010.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00010.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00010/_invalid.png"
+    },
+    "aria04_00011": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00011.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00011.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00011/_invalid.png"
+    },
+    "aria04_00012": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00012.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00012.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00012/_invalid.png"
+    },
+    "aria04_00013": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00013.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00013.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00013/_invalid.png"
+    },
+    "aria04_00014": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00014.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00014.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00014/_invalid.png"
+    },
+    "aria04_00015": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00015.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00015.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00015/_invalid.png"
+    },
+    "aria04_00016": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00016.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00016.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00016/_invalid.png"
+    },
+    "aria04_00017": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00017.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00017.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00017/_invalid.png"
+    },
+    "aria04_00018": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00018.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00018.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00018/_invalid.png"
+    },
+    "aria04_00019": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00019.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00019.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00019/_invalid.png"
+    },
+    "aria04_00020": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00020.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00020.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00020/_invalid.png"
+    },
+    "aria04_00023": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00023.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00023.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00023/_invalid.png"
+    },
+    "aria04_00024": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00024.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00024.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00024/_invalid.png"
+    },
+    "aria04_00025": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00025.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00025.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00025/_invalid.png"
+    },
+    "aria04_00026": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00026.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00026.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00026/_invalid.png"
+    },
+    "aria04_00027": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00027.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00027.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00027/_invalid.png"
+    },
+    "aria04_00029": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00029.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00029.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00029/_invalid.png"
+    },
+    "aria04_00030": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00030.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00030.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00030/_invalid.png"
+    },
+    "aria04_00031": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00031.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00031.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00031/_invalid.png"
+    },
+    "aria04_00032": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00032.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00032.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00032/_invalid.png"
+    },
+    "aria04_00033": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00033.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00033.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00033/_invalid.png"
+    },
+    "aria04_00034": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00034.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00034.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00034/_invalid.png"
+    },
+    "aria04_00035": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00035.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00035.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00035/_invalid.png"
+    },
+    "aria04_00036": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00036.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00036.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00036/_invalid.png"
+    },
+    "aria04_00037": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00037.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00037.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00037/_invalid.png"
+    },
+    "aria04_00038": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00038.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00038.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00038/_invalid.png"
+    },
+    "aria04_00039": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00039.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00039.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00039/_invalid.png"
+    },
+    "aria04_00040": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00040.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00040.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00040/_invalid.png"
+    },
+    "aria04_00041": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00041.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00041.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00041/_invalid.png"
+    },
+    "aria04_00042": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00042.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00042.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00042/_invalid.png"
+    },
+    "aria04_00043": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00043.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00043.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00043/_invalid.png"
+    },
+    "aria04_00044": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00044.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00044.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00044/_invalid.png"
+    },
+    "aria04_00045": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00045.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00045.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00045/_invalid.png"
+    },
+    "aria04_00055": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00055.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00055.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00055/_invalid.png"
+    },
+    "aria04_00057": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00057.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00057.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00057/_invalid.png"
+    },
+    "aria04_00058": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00058.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00058.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00058/_invalid.png"
+    },
+    "aria04_00059": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00059.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00059.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00059/_invalid.png"
+    },
+    "aria04_00060": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00060.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00060.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00060/_invalid.png"
+    },
+    "aria04_00062": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00062.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00062.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00062/_invalid.png"
+    },
+    "aria04_00063": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00063.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00063.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00063/_invalid.png"
+    },
+    "aria04_00064": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00064.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00064.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00064/_invalid.png"
+    },
+    "aria04_00065": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00065.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00065.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00065/_invalid.png"
+    },
+    "aria04_00066": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00066.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00066.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00066/_invalid.png"
+    },
+    "aria04_00067": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00067.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00067.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00067/_invalid.png"
+    },
+    "aria04_00068": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00068.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00068.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00068/_invalid.png"
+    },
+    "aria04_00069": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00069.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00069.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00069/_invalid.png"
+    },
+    "aria04_00070": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00070.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00070.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00070/_invalid.png"
+    },
+    "aria04_00071": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00071.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00071.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00071/_invalid.png"
+    },
+    "aria04_00073": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00073.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00073.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00073/_invalid.png"
+    },
+    "aria04_00074": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00074.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00074.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00074/_invalid.png"
+    },
+    "aria04_00076": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00076.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00076.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00076/_invalid.png"
+    },
+    "aria04_00083": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00083.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00083.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00083/_invalid.png"
+    },
+    "aria04_00085": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00085.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00085.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00085/_invalid.png"
+    },
+    "aria04_00086": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00086.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00086.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00086/_invalid.png"
+    },
+    "aria04_00087": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00087.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00087.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00087/_invalid.png"
+    },
+    "aria04_00088": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00088.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00088.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00088/_invalid.png"
+    },
+    "aria04_00089": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00089.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00089.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00089/_invalid.png"
+    },
+    "aria04_00090": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00090.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00090.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00090/_invalid.png"
+    },
+    "aria04_00091": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00091.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00091.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00091/_invalid.png"
+    },
+    "aria04_00092": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00092.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00092.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00092/_invalid.png"
+    },
+    "aria04_00093": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00093.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00093.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00093/_invalid.png"
+    },
+    "aria04_00107": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00107.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00107.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00107/_invalid.png"
+    },
+    "aria04_00108": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00108.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00108.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00108/_invalid.png"
+    },
+    "aria04_00110": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00110.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00110.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00110/_invalid.png"
+    },
+    "aria04_00111": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00111.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00111.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00111/_invalid.png"
+    },
+    "aria04_00113": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00113.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00113.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00113/_invalid.png"
+    },
+    "aria04_00114": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00114.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00114.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00114/_invalid.png"
+    },
+    "aria04_00115": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00115.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00115.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00115/_invalid.png"
+    },
+    "aria04_00116": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00116.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00116.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00116/_invalid.png"
+    },
+    "aria04_00117": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00117.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00117.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00117/_invalid.png"
+    },
+    "aria04_00118": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00118.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00118.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00118/_invalid.png"
+    },
+    "aria04_00119": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00119.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00119.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00119/_invalid.png"
+    },
+    "aria04_00120": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00120.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00120.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00120/_invalid.png"
+    },
+    "aria04_00121": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00121.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00121.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00121/_invalid.png"
+    }
+  },
+  "test": {
+    "aria01_00004": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00004.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00004.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00004/_invalid.png"
+    },
+    "aria01_00013": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00013.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00013.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00013/_invalid.png"
+    },
+    "aria01_00014": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00014.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00014.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00014/_invalid.png"
+    },
+    "aria01_00016": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00016.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00016.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00016/_invalid.png"
+    },
+    "aria01_00017": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00017.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00017.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00017/_invalid.png"
+    },
+    "aria01_00057": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00057.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00057.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00057/_invalid.png"
+    },
+    "aria01_00060": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00060.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00060.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00060/_invalid.png"
+    },
+    "aria01_00069": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00069.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00069.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00069/_invalid.png"
+    },
+    "aria01_00079": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00079.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00079.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00079/_invalid.png"
+    },
+    "aria01_00093": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00093.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00093.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00093/_invalid.png"
+    },
+    "aria01_00101": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00101.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00101.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00101/_invalid.png"
+    },
+    "aria01_00103": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria01_00103.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria01_00103.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria01_00103/_invalid.png"
+    },
+    "aria02_00008": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00008.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00008.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00008/_invalid.png"
+    },
+    "aria02_00017": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00017.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00017.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00017/_invalid.png"
+    },
+    "aria02_00018": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00018.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00018.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00018/_invalid.png"
+    },
+    "aria02_00019": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00019.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00019.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00019/_invalid.png"
+    },
+    "aria02_00021": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00021.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00021.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00021/_invalid.png"
+    },
+    "aria02_00026": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00026.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00026.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00026/_invalid.png"
+    },
+    "aria02_00032": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00032.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00032.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00032/_invalid.png"
+    },
+    "aria02_00052": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00052.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00052.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00052/_invalid.png"
+    },
+    "aria02_00054": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00054.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00054.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00054/_invalid.png"
+    },
+    "aria02_00110": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria02_00110.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria02_00110.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria02_00110/_invalid.png"
+    },
+    "aria03_00032": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00032.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00032.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00032/_invalid.png"
+    },
+    "aria03_00034": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00034.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00034.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00034/_invalid.png"
+    },
+    "aria03_00063": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00063.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00063.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00063/_invalid.png"
+    },
+    "aria03_00097": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00097.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00097.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00097/_invalid.png"
+    },
+    "aria03_00118": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria03_00118.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria03_00118.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria03_00118/_invalid.png"
+    },
+    "aria04_00007": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00007.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00007.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00007/_invalid.png"
+    },
+    "aria04_00021": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00021.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00021.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00021/_invalid.png"
+    },
+    "aria04_00022": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00022.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00022.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00022/_invalid.png"
+    },
+    "aria04_00028": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00028.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00028.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00028/_invalid.png"
+    },
+    "aria04_00056": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00056.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00056.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00056/_invalid.png"
+    },
+    "aria04_00061": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00061.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00061.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00061/_invalid.png"
+    },
+    "aria04_00072": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00072.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00072.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00072/_invalid.png"
+    },
+    "aria04_00075": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00075.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00075.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00075/_invalid.png"
+    },
+    "aria04_00109": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00109.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00109.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00109/_invalid.png"
+    },
+    "aria04_00112": {
+      "image": "egohuman_processed/004_tagging_extraction/rgb_blend/aria04_00112.png",
+      "target_image": "egohuman_processed/004_tagging_extraction/rgb/aria04_00112.png",
+      "prompt": "remove degradation",
+      "mask": "egohuman_processed/004_tagging_extraction/mask/aria04_00112/_invalid.png"
+    }
+  }
+}
