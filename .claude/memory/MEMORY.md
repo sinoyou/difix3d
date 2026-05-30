@@ -1,0 +1,4 @@
+- [Project venv layout](project_venv.md) — conda-style env at `/local/home/zinyou/projects/Difix3D/venv`, no `bin/activate`; activate via PATH
+- [Handoff docs location](handoff_docs.md) — start every session by reading `.claude/HANDOFF.md`, `.claude/COMMANDS.md`, `.claude/OPEN_TASKS.md` in the project root
+- [Difix3D mask convention](mask_convention.md) — JSON `mask` field is the *invalid* mask (1=invalid); loss code derives `valid_mask = 1 - invalid_mask`
+- [Mirror memory locally](mirror_memory_locally.md) — every auto-memory write/update/delete must also be applied to `.claude/memory/` in the repo (in-repo backup of auto-memory)

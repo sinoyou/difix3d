@@ -5,14 +5,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Session bootstrap
 
 This project keeps its own cross-session handoff in [.claude/](.claude/) —
-read all three at the start of every session:
+read all of these at the start of every session:
 
 - [.claude/HANDOFF.md](.claude/HANDOFF.md) — current goal, active runs, new files
 - [.claude/COMMANDS.md](.claude/COMMANDS.md) — copy-pasteable commands for the active workstream
 - [.claude/OPEN_TASKS.md](.claude/OPEN_TASKS.md) — checklist of next steps
+- [.claude/memory/](.claude/memory/) — mirror of auto-memory (see below)
+- [.claude/notes/](.claude/notes/) — milestone summaries (see below)
 
 These reflect *this user's* workstream (which has diverged significantly from
 upstream README usage); they take precedence over README when the two disagree.
+
+## Memory and notes — in-repo mirror
+
+The auto-memory at `${HOME}/.claude/projects/<slug>/memory/` is fragile:
+if `~/.claude` is renamed, moved, or wiped, every cross-session memory
+for this project is lost. To survive that, this repo mirrors auto-memory
+inside the project itself.
+
+**[.claude/memory/](.claude/memory/) — mirror of Claude's auto-memory.**
+Every time Claude writes, updates, or deletes a file under
+`${HOME}/.claude/projects/-local-home-zinyou-projects-Difix3D/memory/`,
+it MUST make the identical change under `.claude/memory/` in the same
+turn. The two trees stay byte-identical (same `MEMORY.md` index, same
+per-memory files, same frontmatter). At session start, if the two
+disagree, treat the in-repo mirror as the source of truth and rewrite
+the auto-memory side to match — the home dir may have been reset.
+
+**[.claude/notes/](.claude/notes/) — milestone summaries.** A note is a
+narrative record of a significant transition (a finetune that finally
+converged, an approach abandoned, a benchmark result worth remembering).
+*Notes are user-triggered, not Claude-triggered.* Create a new note only
+when the user explicitly asks ("save a note about this") or confirms a
+suggestion. If a note for the current task already exists, update it
+in-place without re-asking. See [.claude/notes/README.md](.claude/notes/README.md)
+for the naming convention and the memory-vs-note distinction.
 
 ## Environment
 
